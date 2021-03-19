@@ -1,9 +1,9 @@
-import { 
-    Component, 
-    Input, 
-    Output, 
-    EventEmitter, 
-    OnChanges, 
+import {
+    Component,
+    Input,
+    Output,
+    EventEmitter,
+    OnChanges,
     SimpleChanges,
     OnInit,
     OnDestroy
@@ -13,37 +13,33 @@ import { Product } from '../product.model';
 
 @Component({
     selector: 'app-product',
-    templateUrl: './product.component.html'
+    templateUrl: './product.component.html',
+    styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements OnChanges, OnInit, OnDestroy{
+export class ProductComponent implements OnChanges, OnInit, OnDestroy {
     @Input() product: Product;
     @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
+    today = new Date();
 
-    constructor(){
-        console.log('1. constructor')
+    constructor() {
+        console.log('1. constructor');
     }
 
     ngOnChanges(changes: SimpleChanges) {
-        console.log('2. ngOnChanges')
-        console.log(changes)
+        console.log('2. ngOnChanges');
+        console.log(changes);
     }
 
     ngOnInit() {
-        console.log('3. ngOnInit')
+        console.log('3. ngOnInit');
     }
-
-    // ngDoCheck() {
-        
-    // }
 
     ngOnDestroy() {
-        //Called once, before the instance is destroyed.
-        //Add 'implements OnDestroy' to the class.
-        console.log('4. ngOnDestroy')
+        console.log('4. ngOnDestroy');
     }
 
-    addCart(){
+    addCart() {
         console.log('Añadido');
         this.productClicked.emit(this.product.id);
     }
