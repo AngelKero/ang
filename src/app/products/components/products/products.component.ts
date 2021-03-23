@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ProductsService } from '../../../core/services/products/products.service';
-import { Product } from '../../../product.model';
+import { Product } from '../../../core/models/product.model';
 
 @Component({
   selector: 'app-products',
@@ -17,12 +17,18 @@ export class ProductsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.products = this.productsService.getAllProducts();
-    console.log(this.products);
+    this.fetchProducts();
   }
 
   clickProduct(id: number) {
     alert('product:' + id);
+  }
+
+  fetchProducts() {
+    this.productsService.getAllProducts()
+    .subscribe(products => {
+      this.products = products;
+    });
   }
 
 }

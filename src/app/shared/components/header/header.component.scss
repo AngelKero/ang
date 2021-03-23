@@ -1,9 +1,17 @@
 nav > a{
     display: inline-block;
     padding: 5px;
+    margin-right: 25px;
+    font-weight: 300;
     text-decoration: none;
+    border-bottom: 3px solid transparent;
+    color: white;
 }
 
 nav > a.active{
-    background-color: blue;
+    border-bottom: 3px solid rgb(255, 187, 0);
+}
+
+.header-row{
+    width: 100%;
 }
