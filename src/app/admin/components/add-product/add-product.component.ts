@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core'
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { Router } from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
-import { ProductsService } from "./../../../core/services/products/products.service";
-import { Product } from "./../../../core/models/product.model";
-import { MyValidators } from "./../../../utils/validators";
+import { ProductsService } from './../../../core/services/products/products.service';
+import { Product } from './../../../core/models/product.model';
+import { MyValidators } from './../../../utils/validators';
 
 
 @Component({
@@ -38,18 +38,18 @@ export class AddProductComponent implements OnInit {
   }
 
   saveProduct(event: Event) {
-    event.preventDefault()
+    event.preventDefault();
     if (this.form.valid) {
       const product: Product = this.form.value;
       this.productsService.createProduct(product)
       .subscribe(rtd => {
         console.log(rtd);
-        this.router.navigate(['./admin/products'])
+        this.router.navigate(['./admin/products']);
       });
     }
   }
 
-  
+
   get priceField() {
     return this.form.get('price');
   }

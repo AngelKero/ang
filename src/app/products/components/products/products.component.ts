@@ -21,7 +21,7 @@ export class ProductsComponent implements OnInit {
   }
 
   clickProduct(id: number) {
-    alert('product:' + id);
+    console.log('product:' + id);
   }
 
   fetchProducts() {

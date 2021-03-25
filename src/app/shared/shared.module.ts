@@ -9,19 +9,25 @@ import { ExponencialPipe } from './pipes/exponencial/exponencial.pipe';
 import { HightlightDirective } from './directives/hightlight/hightlight.directive';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CartrepeatPipe } from './pipes/cartrepeat/cartrepeat.pipe';
+import { DeleteRepeatPipe } from './pipes/deleteRepeat/delete-repeat.pipe';
 
 @NgModule({
   declarations: [
     ExponencialPipe,
     HightlightDirective,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CartrepeatPipe,
+    DeleteRepeatPipe
   ],
   exports: [
     ExponencialPipe,
+    CartrepeatPipe,
     HightlightDirective,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    DeleteRepeatPipe
   ],
   imports: [
     CommonModule,
