@@ -11,18 +11,15 @@ import { Observable } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
 
-  total$: Observable<number>;
+    total$: Observable<number>;
 
-  constructor(
-    private cartService: CartService
-  ) {
-    this.total$ = cartService.cart$
-    .pipe(
-      map(products => products.length)
-    );
-  }
+    constructor(
+        private cartService: CartService
+    ) {
+        this.total$ = cartService.cart$.pipe(map(products => products.length));
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

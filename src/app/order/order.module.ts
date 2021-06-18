@@ -9,14 +9,14 @@ import { SharedModule } from './../shared/shared.module';
 
 
 @NgModule({
-  declarations: [
-    OrderComponent
-  ],
-  imports: [
-    CommonModule,
-    OrderRoutingModule,
-    MaterialModule,
-    SharedModule
-  ]
+    declarations: [
+        OrderComponent
+    ],
+    imports: [
+        CommonModule,
+        OrderRoutingModule,
+        MaterialModule,
+        SharedModule
+    ]
 })
 export class OrderModule { }

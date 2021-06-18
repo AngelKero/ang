@@ -21,24 +21,24 @@ import { EditProductComponent } from './components/edit-product/edit-product.com
 
 
 @NgModule({
-  declarations: [
-    ProductFormComponent,
-    NavComponent,
-    TableComponent,
-    DashComponent,
-    TreeComponent,
-    ElementsComponent,
-    ProductListComponent,
-    AddProductComponent,
-    EditProductComponent
-  ],
-  imports: [
-    CommonModule,
-    AdminRoutingModule,
-    MaterialModule,
-    ReactiveFormsModule,
-    LayoutModule,
-    DragDropModule
-  ]
+    declarations: [
+        ProductFormComponent,
+        NavComponent,
+        TableComponent,
+        DashComponent,
+        TreeComponent,
+        ElementsComponent,
+        ProductListComponent,
+        AddProductComponent,
+        EditProductComponent
+    ],
+    imports: [
+        CommonModule,
+        AdminRoutingModule,
+        MaterialModule,
+        ReactiveFormsModule,
+        LayoutModule,
+        DragDropModule
+    ]
 })
 export class AdminModule { }

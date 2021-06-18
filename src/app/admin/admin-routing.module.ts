@@ -11,7 +11,6 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { EditProductComponent } from './components/edit-product/edit-product.component';
 
-
 const routes: Routes = [
   {
     path: '',
