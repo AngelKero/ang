@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "platzi-store-bd5ce": {
+      "hosting": {
+        "store": [
+          "platzi-store-bd5ce"
+        ]
+      }
+    }
+  }
+}
