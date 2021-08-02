@@ -4,13 +4,13 @@ import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
-    selector: 'app-register',
-    templateUrl: './register.component.html',
-    styleUrls: ['./register.component.scss']
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.scss']
 })
-export class RegisterComponent implements OnInit {
+export class LoginComponent implements OnInit {
 
-    registerForm: FormGroup;
+    loginForm: FormGroup;
     loading = false;
     submitted = false;
 
@@ -21,26 +21,30 @@ export class RegisterComponent implements OnInit {
     ) {}
 
     ngOnInit() {
-        this.registerForm = this.formBuilder.group({
+        this.loginForm = this.formBuilder.group({
             email: ['', [Validators.required, Validators.email]],
             password: ['', [Validators.required, Validators.minLength(6)]]
         });
     }
 
     // convenience getter for easy access to form fields
-    get f() { return this.registerForm.controls; }
+    get f() { return this.loginForm.controls; }
 
     onSubmit() {
-        const value = this.registerForm.value;
-        if (this.registerForm.valid) {
+        const value = this.loginForm.value;
+        if (this.loginForm.valid) {
             this.submitted = true;
             this.loading = true;
-            this.auth.createUser(value.email, value.password)
+            this.auth.login(value.email, value.password)
             .then(() => {
-                this.router.navigate(['/auth/login']);
+                this.router.navigate(['/admin']);
+            })
+            .catch(() => {
+                alert("No es valido");
             });
         } else {
             return;
         }
     }
+
 }

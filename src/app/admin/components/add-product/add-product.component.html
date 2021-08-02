@@ -13,7 +13,7 @@
                     </mat-form-field>
                 </div>
             </div>
-        
+
             <div class="row">
                 <div class="col-xs">
                     <mat-form-field>
@@ -34,13 +34,20 @@
                     </mat-form-field>
                 </div>
             </div>
-        
+
             <div class="row">
                 <div class="col-xs">
                     <mat-form-field class="textarea">
                         <mat-label>Description</mat-label>
                         <textarea formControlName="description" matInput placeholder="Descripcion del Producto" type="text" name="" id=""></textarea>
                     </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs">
+                    <input type="file" (change)="uploadFile($event)">
+                    <img *ngIf="(image$ | async) as image" [src]="image" width="300">
                 </div>
             </div>
         </mat-card-content>
