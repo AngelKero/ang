@@ -1,4 +1,4 @@
-import { AuthService } from './../../../core/services/auth.service';
+import { AuthService } from '@core/services/auth.service';
 import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';

@@ -4,11 +4,10 @@ import { Router } from '@angular/router';
 
 import { finalize } from 'rxjs/operators';
 
-import { ProductsService } from './../../../core/services/products/products.service';
-import { Product } from './../../../core/models/product.model';
-import { MyValidators } from './../../../utils/validators';
+import { ProductsService } from '@core/services/products.service';
+import { Product } from '@core/models/product.model';
+import { MyValidators } from '@utils/validators';
 import { AngularFireStorage } from '@angular/fire/storage';
-import { UploadTaskSnapshot } from '@angular/fire/storage/interfaces';
 import { Observable } from 'rxjs';
 
 

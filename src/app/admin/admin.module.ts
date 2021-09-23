@@ -6,7 +6,7 @@ import { ProductFormComponent } from './components/product-form/product-form.com
 import { ReactiveFormsModule } from '@angular/forms';
 
 
-import { MaterialModule } from './../material/material.module';
+import { MaterialModule } from '@material/material.module';
 import { NavComponent } from './components/nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { TableComponent } from './components/table/table.component';

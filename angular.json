@@ -49,6 +49,7 @@
               "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
+              "aot": true,
               "vendorChunk": false,
               "buildOptimizer": true,
               "budgets": [
@@ -164,5 +165,8 @@
       }
     }
   },
-  "defaultProject": "store"
+  "defaultProject": "store",
+  "cli": {
+    "analytics": "9139a8a7-77ae-4a87-b192-bedc9e29112c"
+  }
 }
