@@ -1,12 +1,12 @@
 import { TokenInterceptor } from './interceptors/token.interceptor';
-import { CommonModule } from "@angular/common";
-import { HTTP_INTERCEPTORS } from "@angular/common/http";
-import { APP_INITIALIZER, ErrorHandler, NgModule } from "@angular/core";
-import { Router } from "@angular/router";
-import { HttpErrorInterceptor } from "@core/interceptors/HttpErrorInterceptor";
-import { ProductsService } from "@core/services/products.service";
+import { CommonModule } from '@angular/common';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { APP_INITIALIZER, ErrorHandler, NgModule } from '@angular/core';
+import { Router } from '@angular/router';
+import { HttpErrorInterceptor } from '@core/interceptors/HttpErrorInterceptor';
+import { ProductsService } from '@core/services/products.service';
 
-import * as Sentry from "@sentry/angular";
+import * as Sentry from '@sentry/angular';
 
 @NgModule({
     declarations: [],

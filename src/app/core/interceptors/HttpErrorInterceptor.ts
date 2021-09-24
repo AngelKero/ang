@@ -1,9 +1,9 @@
-import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from "@angular/common/http";
-import { Observable, throwError } from "rxjs";
-import { catchError, retry } from "rxjs/operators";
+import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
 
 import * as Sentry from '@sentry/browser';
-import { retryWithDelay } from "@utils/retryWithDelay";
+import { retryWithDelay } from '@utils/retryWithDelay';
 
 export class HttpErrorInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
@@ -14,6 +14,6 @@ export class HttpErrorInterceptor implements HttpInterceptor {
                 Sentry.captureException(error);
                 return throwError(error);
             })
-        )
+        );
     }
 }

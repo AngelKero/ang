@@ -9,21 +9,21 @@ import { element } from 'protractor';
 })
 export class CartrepeatPipe implements PipeTransform {
 
-  products: Product[];
+    products: Product[];
 
-  constructor(private cartService: CartService){
-  }
+    constructor(private cartService: CartService) {
+    }
 
-  transform(product: Product): number {
-    let total = 0;
-    this.cartService.cart$.subscribe(products => {
-      products.forEach(element => {
-        if(element.id === product.id) {
-          total++;
-        }
-      });
-    });
-    return total;
-  }
+    transform(product: Product): number {
+        let total = 0;
+        this.cartService.cart$.subscribe(products => {
+        products.forEach(element => {
+            if(element.id === product.id) {
+            total++;
+            }
+        });
+        });
+        return total;
+    }
 
 }
